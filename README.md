@@ -6,3 +6,83 @@
 
 ## 使用方法
   * 将`sra_plugins_notify`放置在StarRailAssistant的`plugins`目录下载
+
+### 配置推送：
+- 推送名称 / notifier: bark
+
+  参数大全 / params:
+  {'required': ['key'], 'optional': ['title', 'sound', 'isarchive', 'icon', 'group', 'url', 'copy', 'autocopy']}
+
+- 推送名称 / notifier: custom
+
+  参数大全 / params:
+  {'required': ['url'], 'optional': ['method', 'datatype', 'data']}
+
+- 推送名称 / notifier: dingtalk
+
+  参数大全 / params:
+  {'required': ['token'], 'optional': ['title', 'secret', 'markdown']}
+
+- 推送名称 / notifier: discord
+
+  参数大全 / params:
+  {'required': ['webhook'], 'optional': ['title', 'username', 'avatar_url', 'color']}
+
+- 推送名称 / notifier: pushplus
+
+  参数大全 / params:
+  {'required': ['token'], 'optional': ['title', 'topic', 'markdown']}
+
+- 推送名称 / notifier: qmsg
+
+  参数大全 / params:
+  {'required': ['key'], 'optional': ['title', 'mode', 'qq']}
+
+- 推送名称 / notifier: serverchan
+
+  参数大全 / params:
+  {'required': ['sckey', 'title'], 'optional': []}
+
+- 推送名称 / notifier: serverchanturbo
+
+  参数大全 / params:
+  {'required': ['sctkey', 'title'], 'optional': ['channel', 'openid']}
+
+- 推送名称 / notifier: telegram
+
+  参数大全 / params:
+  {'required': ['token', 'userid'], 'optional': ['title', 'api_url']}
+
+- 推送名称 / notifier: wechatworkapp
+
+  参数大全 / params:
+  {'required': ['corpid', 'corpsecret', 'agentid'], 'optional': ['title', 'touser', 'markdown']}
+
+- 推送名称 / notifier: wechatworkbot
+
+  参数大全 / params:
+  {'required': ['key'], 'optional': ['title', 'markdown']}
+* **required为必填参数，optional为选填参数**
+
+配置参考：
+```json
+"ONEPUSH": {
+  "notifier": "telegram",
+  "params": {
+    "title": "",
+    "markdown": false,
+    "token": "xxxxxxxxx:xxxxxxxxxxxxxxxxxxxxx",
+    "userid": 123456789
+  }
+}
+```
+```json
+"ONEPUSH": {
+  "notifier": "pushplus",
+  "params": {
+    "title": "",
+    "token": "XXXXXXXXXXXXXXXXXXXXXXXX",
+    "markdown": false
+  }
+}
+```
