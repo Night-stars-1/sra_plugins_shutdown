@@ -86,3 +86,35 @@
   }
 }
 ```
+
+完整配置参考
+```json
+{
+  "real_width": 0,
+  "auto_battle_persistence": 0,
+  "real_height": 0,
+  "github_proxy": "",
+  "rawgithub_proxy": "",
+  "webhook_url": "",
+  "start": true,
+  "temp_version": "0",
+  "star_version": "0",
+  "open_map": "m",
+  "level": "INFO",
+  "adb": "127.0.0.1:7555",
+  "adb_path": "temp\\adb\\adb",
+  "proxies": "",
+  "scaling": 1.0,
+  "borderless": true,
+  "map_version": "0",
+  "ONEPUSH": {
+    "notifier": "telegram",
+    "params": {
+      "title": "",
+      "markdown": false,
+      "token": "xxxxxxxxx:xxxxxxxxxxxxxxxxxxxxx",
+      "userid": 123456789
+    }
+  }
+}
+```
